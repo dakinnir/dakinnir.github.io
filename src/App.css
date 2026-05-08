@@ -9,7 +9,7 @@
 }
 
 .navbar-inner {
-    max-width: 1080px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 14px 32px;
     display: flex;
@@ -61,7 +61,7 @@
 }
 
 main {
-    max-width: 1080px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 64px 32px 48px;
 }
@@ -116,7 +116,7 @@ section {
     margin: 0;
     display: flex;
     gap: 16px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 section {
@@ -203,7 +203,13 @@ section h2 {
 
 .role h3 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.role h3 .role-title {
+    font-weight: 400;
+    color: var(--text);
+    margin-left: 8px;
 }
 
 .meta {

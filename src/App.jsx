@@ -204,7 +204,8 @@ function App() {
                         I care about writing reliable, thoughtful code and keep
                         growing by building side projects, reading engineering
                         write-ups, and digging into problems outside my
-                        day-to-day stack. Most of what I tinker with lives on{" "}
+                        day-to-day stack. You can find some of my projects and
+                        writings on{" "}
                         <a
                             href="https://github.com/dakinnir"
                             target="_blank"
@@ -241,7 +242,10 @@ function App() {
                             <li key={e.company + e.title}>
                                 <div className="role">
                                     <h3>
-                                        {e.title} · {e.company}
+                                        {e.company}
+                                        <em className="role-title">
+                                            {e.title}
+                                        </em>
                                     </h3>
                                     <span className="meta">{e.period}</span>
                                 </div>
