@@ -80,6 +80,7 @@ const EDUCATION = {
 function App() {
     const [repos, setRepos] = useState(null);
     const [error, setError] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
     const avatarRef = useRef(null);
 
     const handleAvatarMove = (e) => {
@@ -129,7 +130,25 @@ function App() {
                     <a href="#top" className="brand">
                         DAKINNIR
                     </a>
-                    <ul className="nav-links">
+                    <button
+                        type="button"
+                        className="nav-toggle"
+                        aria-expanded={menuOpen}
+                        aria-controls="primary-nav"
+                        aria-label="Toggle navigation menu"
+                        onClick={() => setMenuOpen((v) => !v)}
+                    >
+                        <span className={`hamburger ${menuOpen ? "open" : ""}`} aria-hidden="true">
+                            <span />
+                            <span />
+                            <span />
+                        </span>
+                    </button>
+                    <ul
+                        id="primary-nav"
+                        className={`nav-links ${menuOpen ? "open" : ""}`}
+                        onClick={() => setMenuOpen(false)}
+                    >
                         <li>
                             <a href="#experience">Experience</a>
                         </li>
